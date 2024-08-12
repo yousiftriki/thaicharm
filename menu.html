@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="x-icon" href="images/IMG_2833.jpg">
+    <title>Thai Charm</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!--box-icons link-->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+
+    <!--header-->
+    <header>
+        <a href="index.html" class='logo'>
+            <img src="images/IMG_2833.jpg">
+        </a>
+
+        <ul class='navbar'>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class='h-btn'>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!--home section-->
+    <section class="home">
+        <div class="home-text">
+            <h1>Menu</h1>
+
+        </div>
+
+            <div class="home-img">
+                <img src="images/IMG_2772.jpg">
+            </div>
+
+    </section>
+
+    <!---property section-->
+	
+
+    <!---about section-->
+	<section class="about">
+		<div class="about-img" data-aos="zoom-in-up">
+			<img src="images/Group.jpg">
+		</div>
+
+		<div class="about-text" data-aos="zoom-in-up">
+			<h2>We look forward to welcoming you to Thai Charm!</h2>
+			<p>Our mission is to offer an unforgettable dining experience by combining exceptional food, warm hospitality, and the enchanting flavors of Thailand.</p>
+			<a href="about.html" class="btn">About</a>
+		</div>
+	</section>
+
+    <!--contact section-->
+	<section class="Subscribe" data-aos="zoom-in-up">
+		<div class="Subscribe-content">
+			<h2>We’re proud to create memorable moments!</h2>
+			<p>Delicious meals that keep our customers coming back for more.</p>
+			<a href="contact.html" class="btn">Contact Us</a>
+		</div>
+	</section>
+
+    <!---footer-->
+	<section class="contact" data-aos="zoom-in-up">
+		<div class="contact-content">
+			<img src="images/IMG_2770.jpg">
+			<p>Authentic Taste, Every Time</p>
+			<div class="icons">
+				<a href="https://www.facebook.com/MonaTransactionServices/"><i class='bx bxl-facebook'></i></a>
+				<a href="https://www.instagram.com/monatcservices/"><i class='bx bxl-instagram-alt'></i></a>
+			</div>
+		</div>
+
+		<div class="contact-content">
+			<h4>Thai Charm</h4>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+		</div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+     document.addEventListener('DOMContentLoaded', function() {
+            // Get the email input field
+            var emailInput = document.querySelector('#emailForm input[type="email"]');
+
+
+            // Add event listener to the form
+            document.getElementById('emailForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting
+
+                var email = emailInput.value.trim(); // Get the trimmed value of the email input
+
+                if (email !== '') {
+                    // Save the email in Local Storage
+                    var savedEmails = localStorage.getItem('savedEmails') ? JSON.parse(localStorage.getItem('savedEmails')) : [];
+                    savedEmails.push(email);
+                    localStorage.setItem('savedEmails', JSON.stringify(savedEmails));
+
+                    // Optionally, you can display a message indicating that the email has been saved
+                    alert('Thank you for providing your email we will add you to our contacts!!');
+                } else {
+                    alert('Please enter a valid email address!');
+                }
+
+                // Clear the input field
+                emailInput.value = '';
+
+                return false; // Prevent form submission and page reload
+            });
+        });
+    AOS.init({
+    	offset: 300,
+    	duration: 1200
+    });
+  </script>
+
+    <!--js file-->
+    <script src="js/script.js"></script>
+</body>
+</html>
