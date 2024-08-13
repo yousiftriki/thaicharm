@@ -15,10 +15,10 @@
     --h2-font: 2.9rem;
     --p-font: 1.1rem;
 
-    --bg-color: #cfffc5;
-    --text-color: #000000;
+    --bg-color: black;
+    --text-color: white;
     --main-color: #1ba400;
-    --other-color: #000000;
+    --other-color:#cfffc5;
 }
 body{
     background: var(--bg-color);
@@ -146,7 +146,7 @@ section{
 }
 header.sticky{
     padding: 8px 15%;
-    background: #ffffff;
+    background: black;
 }
 .property-content{
 	display: grid;
@@ -350,7 +350,7 @@ header.sticky{
 		display: block;
 		font-size: 20px;
 		padding: 15px;
-		color: #fff;
+		color:white;
 	}
 	.navbar.open{
 		right: 0;
